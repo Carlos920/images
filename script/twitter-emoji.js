@@ -8,6 +8,8 @@
 // @match        *://*.emojipedia.org/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
+// @source       https://github.com/twitter/twemoji
 // ==/UserScript==
 
 (function() {
