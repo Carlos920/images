@@ -6,6 +6,8 @@
 // @author       Carlos920
 // @match        *://*.v2ex.com/*
 // @match        *://*.emojipedia.org/*
+// @match        *://*.emojiall.com/*
+// @match        *://*/ipfs/bafybeiazdy6cpftzahp6iv3s5sw6r4g5232z3sxktt6deahli4zz7lvoa4/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
 // @grant        none
 // @source       https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
