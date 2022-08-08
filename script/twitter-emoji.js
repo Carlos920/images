@@ -15,7 +15,7 @@
 
 (function() {
     'use strict';
-
+// @match        *://*/*
     // 文档：https://github.com/twitter/twemoji
 
     var head = document.head || document.getElementsByTagName("head")[0];
