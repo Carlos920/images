@@ -4,6 +4,8 @@
 // @version      0.1
 // @description  在Windows上使用Twitter Emoji显示Chrome Emoji字符
 // @author       Carlos920
+// @updateURL    https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
+// @downloadURL  https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
 // @match        *://*.v2ex.com/*
 // @match        *://*.emojipedia.org/*
 // @match        *://*.emojiall.com/*
