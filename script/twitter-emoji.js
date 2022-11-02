@@ -4,20 +4,15 @@
 // @version      0.1
 // @description  在Windows上使用Twitter Emoji显示Chrome Emoji字符
 // @author       Carlos920
-// @updateURL    https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
-// @downloadURL  https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
-// @match        *://*.v2ex.com/*
-// @match        *://*.emojipedia.org/*
-// @match        *://*.emojiall.com/*
-// @match        *://*/ipfs/bafybeiazdy6cpftzahp6iv3s5sw6r4g5232z3sxktt6deahli4zz7lvoa4/*
+// @match        *://*/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
-// @grant        none
+// @grant        GM_getResourceURL
 // @source       https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
+// @resource      twemoji https://twemoji.maxcdn.com/v/latest/twemoji.min.js
 // ==/UserScript==
 
 (function() {
     'use strict';
-// @match        *://*/*
     // 文档：https://github.com/twitter/twemoji
 
     var head = document.head || document.getElementsByTagName("head")[0];
@@ -35,9 +30,10 @@
     var script = document.createElement("script");
     script.setAttribute(
         "src",
-        "https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+        GM_getResourceURL('twemoji')
     );
     script.setAttribute("crossorigin", "anonymous");
+
     script.onload = script.onreadystatechange = function () {
         if (
             !this.readyState ||
