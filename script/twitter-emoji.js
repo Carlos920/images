@@ -8,7 +8,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
 // @grant        GM_getResourceURL
 // @source       https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
-// @resource      twemoji https://twemoji.maxcdn.com/v/latest/twemoji.min.js
+// @require      https://twemoji.maxcdn.com/v/latest/twemoji.min.js
 // ==/UserScript==
 
 (function() {
@@ -27,27 +27,9 @@
 	}`;
     head.appendChild(style);
 
-    var script = document.createElement("script");
-    script.setAttribute(
-        "src",
-        GM_getResourceURL('twemoji')
-    );
-    script.setAttribute("crossorigin", "anonymous");
-
-    script.onload = script.onreadystatechange = function () {
-        if (
-            !this.readyState ||
-            this.readyState === "loaded" ||
-            this.readyState === "complete"
-        ) {
-            //callback();
-            script.onload = script.onreadystatechange = null;
-            twemoji.parse(document.body, {
-                className: "twitter-emoji",
-                folder: "svg",
-                ext: ".svg",
-            });
-        }
-    };
-    head.appendChild(script);
+    twemoji.parse(document.body, {
+        className: "twitter-emoji",
+        folder: "svg",
+        ext: ".svg",
+    });
 })();
