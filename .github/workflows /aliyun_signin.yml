@@ -1,0 +1,29 @@
+name: Aliyun Signin
+
+on:
+  schedule:
+   # 20 17 * * * 每天国际时间 17:20 运行一次, 中国时间 01:20
+    - cron: '20 17 * * *'
+  workflow_dispatch:
+jobs:
+  signin:
+    name: Aliyun Signin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ImYrS/aliyun-auto-signin@main
+        with:
+          REFRESH_TOKENS: ${{ secrets.REFRESH_TOKENS }}
+          GP_TOKEN: ${{ secrets.GP_TOKEN}}
+          PUSH_TYPES: 'TELEGRAM'
+          # SERVERCHAN_SEND_KEY: ${{ secrets.SERVERCHAN_SEND_KEY }} # [可选] Server酱推送渠道的 SendKey
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }} # [可选] Telegram Bot Token
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }} # [可选] Telegram 接收推送消息的会话 ID
+          # PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }} # [可选] PushPlus Token
+          # SMTP_HOST: ${{ secrets.SMTP_HOST }} # [可选] SMTP 服务器地址
+          # SMTP_PORT: ${{ secrets.SMTP_PORT }} # [可选] SMTP 服务器端口
+          # SMTP_TLS: ${{ secrets.SMTP_TLS }} # [可选] SMTP 服务器是否使用 TLS
+          # SMTP_USER: ${{ secrets.SMTP_USER }} # [可选] SMTP 服务器用户名
+          # SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }} # [可选] SMTP 服务器密码
+          # SMTP_SENDER: ${{ secrets.SMTP_SENDER }} # [可选] SMTP 发件人邮箱
+          # SMTP_RECEIVER: ${{ secrets.SMTP_RECEIVER }} # [可选] SMTP 收件人邮箱
+          # FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }} # [可选] 飞书 Webhook 地址
