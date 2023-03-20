@@ -3,13 +3,12 @@ name: Aliyun Signin
 on:
   schedule:
    # 20 17 * * * 每天国际时间 17:20 运行一次, 中国时间 01:20
-    - cron: '30 12 * * *'
+    - cron: '25 13 * * *'
   workflow_dispatch:
 jobs:
   signin:
     name: Aliyun Signin
     runs-on: ubuntu-latest
-    environment: aliyun
     steps:
       - uses: ImYrS/aliyun-auto-signin@main
         with:
