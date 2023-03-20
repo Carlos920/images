@@ -9,6 +9,7 @@ jobs:
   signin:
     name: Aliyun Signin
     runs-on: ubuntu-latest
+    environment: aliyun
     steps:
       - uses: ImYrS/aliyun-auto-signin@main
         with:
