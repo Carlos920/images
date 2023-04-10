@@ -8,7 +8,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=twitter.com
 // @grant        GM_getResourceURL
 // @source       https://raw.githubusercontent.com/Carlos920/images/master/script/twitter-emoji.js
-// @require      https://twemoji.maxcdn.com/v/latest/twemoji.min.js
+// @require      https://unpkg.com/@twemoji/api@latest/dist/twemoji.min.js
 // ==/UserScript==
 
 (e=>{const o=document.createElement("style");o.innerText=e,document.head.appendChild(o)})(`img.twitter-emoji {height: 1em;width: 1em;margin: 0 .05em 0 .1em !important;vertical-align: -0.1em;display:inline-block;}`);
@@ -22,3 +22,11 @@
                 ext: ".svg",
             });
 })();
+
+// official https://unpkg.com/twemoji@latest/dist/twemoji.min.js
+
+/*
+official fork
+https://github.com/jdecked/twemoji
+https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js
+*/
