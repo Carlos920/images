@@ -18,6 +18,7 @@
 127.0.0.1 cloud.hpplay.cn
 127.0.0.1 ad.hpplay.cn
 127.0.0.1 adc.hpplay.cn
+127.0.0.1 adcdn.hpplay.cn
 127.0.0.1 gslb.hpplay.cn
 127.0.0.1 cdn1.hpplay.cn
 127.0.0.1 ftp.hpplay.com.cn
@@ -28,6 +29,10 @@
 127.0.0.1 api.hpplay.com.cn
 127.0.0.1 h5.hpplay.com.cn
 127.0.0.1 hpplay.cdn.cibn.cc
+127.0.0.1 sdkauth.hpplay.cn
+
+
+
 
 # 屏蔽小米电视其他广告
 127.0.0.1 t7z.cupid.ptqy.gitv.tv
